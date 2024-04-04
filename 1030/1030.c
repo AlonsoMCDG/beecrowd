@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 		scanf("%d %d", &n, &k);
     
 		ans = 0;
-    for(i = 1; i <= n; i ++)
+		for(i = 1; i <= n; i ++)
 			ans = (ans + k) % i;
 			
 		printf("Case %d: %d\n", nc, ans+1);
