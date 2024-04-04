@@ -78,21 +78,21 @@ int movimentos_validos(int **t, int l, int c)
 int main(int argc, char *argv[])
 {
 	char movimentos[][20] = {"NONE",
-							 "DOWN",
-							 "LEFT",
-							 "DOWN LEFT",
-							 "RIGHT",
-							 "DOWN RIGHT",
-							 "LEFT RIGHT",
-							 "DOWN LEFT RIGHT",
-							 "UP",
-							 "DOWN UP",
-							 "LEFT UP",
-							 "DOWN LEFT UP",
-							 "RIGHT UP",
-							 "DOWN RIGHT UP",
-							 "LEFT RIGHT UP",
-							 "DOWN LEFT RIGHT UP"};
+				 "DOWN",
+				 "LEFT",
+				 "DOWN LEFT",
+				 "RIGHT",
+				 "DOWN RIGHT",
+				 "LEFT RIGHT",
+				 "DOWN LEFT RIGHT",
+				 "UP",
+				 "DOWN UP",
+				 "LEFT UP",
+				 "DOWN LEFT UP",
+				 "RIGHT UP",
+				 "DOWN RIGHT UP",
+				 "LEFT RIGHT UP",
+				 "DOWN LEFT RIGHT UP"};
 
 	//printf("%s\n", movimentos[UP]);
 	int i, j, T, linhas = 4, colunas = 4;
