@@ -12,12 +12,10 @@ int divmod(int *p, int m)
 
 int main()
 {
-    int d, m, a;
+    int d;
     scanf("%d", &d);
-    a = divmod(&d, 365);
-    m = divmod(&d, 30);
-    printf("%d ano(s)\n", a);
-    printf("%d mes(es)\n", m);
+    printf("%d ano(s)\n", divmod(&d, 365));
+    printf("%d mes(es)\n", divmod(&d, 30));
     printf("%d dia(s)\n", d);
     return 0;
 }
