@@ -6,8 +6,9 @@
 using namespace std;
  
 int main() {
-    int A, B;
-    scanf("%d %d", &A, &B);
-    printf("SOMA = %d\n", (A+B));
+    double raio;
+    scanf("%lf", &raio);
+    printf("A=%.4lf\n", (raio*raio*3.14159));
+ 
     return 0;
 }
