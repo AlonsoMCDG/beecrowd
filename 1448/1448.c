@@ -28,44 +28,23 @@ int main()
         frase_correta[len - 1] = '\0';
         frase_time1[len - 1] = '\0';
         frase_time2[len - 1] = '\0';
-        
-        // printf("fc = %s\n", frase_correta);
-        // printf("t1 = %s\n", frase_time1);
-        // printf("t2 = %s\n", frase_time2);
 
         for (i = 0; i < len; i ++)
         {
-            // printf("----\n");
-            // printf("fc[%d] = %c\n", i, frase_correta[i]);
-            // printf("t1[%d] = %c\n", i, frase_time1[i]);
-            // printf("t2[%d] = %c\n", i, frase_time2[i]);
-
             t1d = frase_correta[i] == frase_time1[i];
             t2d = frase_correta[i] == frase_time2[i];
 
             p1 += t1d;
             p2 += t2d;
 
-            // printf("td1 = %d, td2 = %d\n", t1d, t2d);
-            // printf("p1 = %d, p2 = %d\n", p1, p2);
-
             if (!desempate)
             {
                 desempate = 1 * (t1d && !t2d) + 2 * (!t1d && t2d);
-
-                // if (t1d && !t2d)
-                //     desempate = 1;
-                // else if (t2d && !t1d)
-                //     desempate = 2;
             }
-
-            // printf("desempate = %d\n", desempate);
         }
 
         printf("Instancia %d\n", instancia_atual);
-
-        // printf("p1 = %d, p2 = %d\n", p1, p2);
-        // printf("desempate = %d\n", desempate);
+      
         if (p1 == p2)
         {
             if (desempate)
