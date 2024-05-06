@@ -3,7 +3,7 @@
 -- 05/05/2024
 SELECT
 	dp.nome AS departamento, 
-    e.nome AS empregado, 
+    e.nome AS empregado,
     salario_empregado.salario_bruto, 
     desconto_empregado.desconto,
     salario_empregado.salario_bruto - desconto_empregado.desconto AS salario_liquido
