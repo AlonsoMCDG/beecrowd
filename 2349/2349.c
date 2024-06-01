@@ -10,10 +10,7 @@ int main()
     scanf("%d %d %d", &N, &C, &S), S --;
     
     for (i = 0, ans = (r == S); i < C && scanf("%d", &p); i ++)
-    {
-        r = (N + r + p) % N;
-        ans += (r == S);
-    }
+        ans += ((r = (N + r + p) % N) == S);
     
     printf("%d\n", ans);
 
