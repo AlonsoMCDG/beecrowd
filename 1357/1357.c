@@ -22,12 +22,12 @@ int braileEmDigitos[] = {0, 1, 0, 3, 0, 2, 9, 6, 0, 5, 0, 4, 0, 8, 0, 7};
 
 void imprimeDigitosParaBraile(char *s, int N)
 {
-    int i, j, k;
-
-    for (k = 0; k < 3; k ++, printf("\n"))
-        for (i = 0; i < N; printf("%s", ++ i == N ? "" : " "))
+    int i, j, k, t;
+    char out[300];
+    for (k = 0; k < 3; k ++, 0, out[-- t] = '\0', printf("%s\n", out))
+        for (t = i = 0; i < N; i ++, out[t ++] = ' ')
             for (j = 0; j < 2; j ++)
-                printf("%c", digitosEmBraile[ctoi(s[i])][k][j]);
+                out[t ++] = digitosEmBraile[ctoi(s[i])][k][j];
 }
 
 void imprimeBraileParaDigitos(char s[100][3][3], int N)
@@ -47,7 +47,7 @@ void imprimeBraileParaDigitos(char s[100][3][3], int N)
 int main()
 {
 
-    int D, sz, i, j, k;
+    int D, i, j, k;
     char op;
     char inputS[102];
     char inputB[100][3][3];
