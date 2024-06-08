@@ -27,7 +27,7 @@ int main()
     };
     scanf("%d", &N);
 
-    while (N-- && scanf(" %s %s", s1, s2))
+    while (N -- && scanf(" %s %s", s1, s2))
     {
         n1 = GETNUM(s1), n2 = GETNUM(s2);
         p1 = 1 * jogos[n1][n2], p2 = 2 * jogos[n2][n1];
