@@ -9,7 +9,7 @@
 #define MAX_LEN_CAMINHO 2102000
 #define TABLE_SIZE 20
 
-#define DEBUG 0
+#define DEBUG 1
 #define debug if(DEBUG)
 
 typedef struct Node
