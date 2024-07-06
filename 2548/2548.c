@@ -11,7 +11,8 @@ int main()
     {
         for (i = 0; i < N; i ++)
             scanf("%d", &modelos[i]);
-
+        
+        // tambem serve ordenar de forma decrescente e somar os M primeiros elementos
         for (i = N - 1, ans = 0; i >= 0 && i >= N - M; i --)
             ans += modelos[i];
 
