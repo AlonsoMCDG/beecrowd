@@ -36,6 +36,7 @@ int main()
                     dist[u][v] = dist[u][k] + dist[k][v];
     ////
 
+    // calcular a menor distancia maxima
     for (i = 0; i < N; i ++)
     {
         int d = 0;
