@@ -10,7 +10,7 @@ int min(int x, int y, int z) { return x < y && x < z ? x : y < z ? y : z; }
 
 char * calcular_resultado(int *p)
 {
-    int r = p[0], g = p[1], b = p[2], x, y;
+    int r = p[0], g = p[1], b = p[2];
 
     return r > g && r > b ? "red" 
          : g > r && g > b ? "green"
@@ -18,6 +18,7 @@ char * calcular_resultado(int *p)
        : r == g && g == b ? "trempate"
                           : "empate";
 }
+
 int main()
 {
     int C, N, i, j;
