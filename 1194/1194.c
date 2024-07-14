@@ -13,7 +13,6 @@
 typedef struct Node
 {
     char *id;
-    struct Node *parent;
     struct Node *left_child;
     struct Node *right_child;
 } Node;
@@ -47,11 +46,10 @@ void free_pool()
     free_address = 0;
 }
 
-Node *new_node(char *id, Node *parent)
+Node *new_node(char *id)
 {
     Node *new_node = &nodes_pool[free_address ++];
     new_node->id = strdup(id);
-    new_node->parent = parent;
     new_node->left_child = NULL;
     new_node->right_child = NULL;
 
@@ -79,7 +77,7 @@ void split_ids(char *s1, char *s2, char ids_s1[MAX_N][MAX_LEN], char ids_s2[MAX_
 
 void build_graph(Node *root, char ids_s1[MAX_N][MAX_LEN], char ids_s2[MAX_N][MAX_LEN], int N)
 {
-    Node *parent = new_node(ids_s1[0], NULL);
+    Node *parent = new_node(ids_s1[0]);
     root->left_child = parent;
     Node *node;
 
@@ -92,7 +90,7 @@ void build_graph(Node *root, char ids_s1[MAX_N][MAX_LEN], char ids_s2[MAX_N][MAX
         while (i < N && strcmp(ids_s1[i], ids_s2[j]))
         {
             i ++;
-            node = new_node(ids_s1[i], parent);
+            node = new_node(ids_s1[i]);
             insert(&stack, node);
 
             if (parent->left_child == NULL)
@@ -154,7 +152,7 @@ int main()
     {
         split_ids(s1, s2, ids_s1, ids_s2, N);
         free_pool();
-        Node *root = new_node("root", NULL);
+        Node *root = new_node("root");
         build_graph(root, ids_s1, ids_s2, N);
 
         len_post = 0;
