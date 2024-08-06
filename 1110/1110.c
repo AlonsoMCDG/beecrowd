@@ -14,7 +14,6 @@ typedef struct Card
 {
     int num;
     struct Card *next;
-    struct Card *prev;
 } Card;
 
 int main()
@@ -27,13 +26,10 @@ int main()
 
     while (scanf("%d", &N), N)
     {
-        Card *prev = NULL;
         for (i = 0; i < N; i ++)
         {
             cards_memory_pool[i]->num = i + 1;
             cards_memory_pool[i]->next = i + 1 < N ? cards_memory_pool[i + 1] : NULL;
-            cards_memory_pool[i]->prev = prev;
-            prev = cards_memory_pool[i];
         }
 
         Card *stack_top = cards_memory_pool[0];
