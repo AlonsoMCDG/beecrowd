@@ -10,7 +10,7 @@ int main()
 
     while (scanf("%lf %lf %lf %lf %lf %lf %lf", &xf, &yf, &xi, &yi, &v, &r1, &r2) != EOF)
     {
-        d = sqrt(pow(xi - xf, 2) + pow(yi - yf, 2)); // distancia entr Fiddlesticks e o inimigo 
+        d = sqrt(pow(xi - xf, 2) + pow(yi - yf, 2)); // distancia entre Fiddlesticks e o inimigo 
         d += 1.5 * v; // o inimigo se move nesse tempo
 
         if (d <= r1 + r2)  // o ataque alcanca o inimigo
