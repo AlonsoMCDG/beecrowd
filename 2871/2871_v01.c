@@ -37,10 +37,11 @@ void add_int(char *str, int *k, int n)
         str[(*k) ++] = aux[i] + '0';
 }
 
+char *s = " saca(s) e  litro(s)\n";
+
 void concat(char *saida, int *k, int litros)
 {
     int i = 0;
-    char *s = " saca(s) e  litro(s)\n";
 
     add_int(saida, k, litros / 60);
     while (i < 11) saida[(*k) ++] = s[i ++];
